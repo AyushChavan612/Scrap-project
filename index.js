@@ -20,7 +20,7 @@ main()
   .catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/scrap2eco");
+  await mongoose.connect("mongodb+srv://chavanayushp:NmkCB09XArizSzdA@blogify.q7px2.mongodb.net/?retryWrites=true&w=majority&appName=Blogify");
 }
 
 app.listen(port, () => {
