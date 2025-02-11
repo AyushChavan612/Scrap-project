@@ -28,7 +28,7 @@ async function main() {
 app.listen(port, () => {
   console.log(`the app is listening to the port ${port}`);
 });
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index");
 });
 
