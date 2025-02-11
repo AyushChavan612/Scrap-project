@@ -16,6 +16,14 @@
       "dest": "/public/$1"
     },
     {
+      "src": "/(.*\\.(ejs|js|png|jpg|jpeg|gif|ico))",
+      "dest": "/views/$1"
+    },
+    {
+      "src": "/(.*\\.(ejs|js|png|jpg|jpeg|gif|ico))",
+      "dest": "/model/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.js"
     }
