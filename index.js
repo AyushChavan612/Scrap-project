@@ -14,6 +14,15 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 const port = process.env.PORT;
+
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'self'; font-src 'self' data: https://scrap-project-five.vercel.app"
+  );
+  next();
+});
+
 main()
   .then((res) => {
     console.log("Connection Successfull");
