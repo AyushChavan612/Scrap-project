@@ -1,35 +1,39 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "index.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
-    }
-  ], 
-  
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; font-src 'self' data: https://scrap-project-five.vercel.app"
-        }
-      ]
-    }
+  {
+  "src": "index.js",
+  "use": "@vercel/node"
+  },
+  {
+  "src": "public/**/*",
+  "use": "@vercel/static"
+  },
+  {
+  "src": "views/**/*",
+  "use": "@vercel/static"
+  },
+  {
+  "src": "model/**/*",
+  "use": "@vercel/static"
+  }
   ],
   "routes": [
-    {
-      "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico|woff2))",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.js"
-    }
+  {
+  "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico))",
+  "dest": "/public/$1"
+  },
+      {
+        "src": "/(.*\\.(ejs|js|png|jpg|jpeg|gif|ico))",
+        "dest": "/views/$1"
+      },
+      {
+        "src": "/(.*\\.(ejs|js|png|jpg|jpeg|gif|ico))",
+        "dest": "/model/$1"
+      },
+  {
+  "src": "/(.*)",
+  "dest": "/index.js"
+  }
   ]
-}
+  }
