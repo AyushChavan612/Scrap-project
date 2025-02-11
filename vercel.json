@@ -9,7 +9,8 @@
       "src": "public/**/*",
       "use": "@vercel/static"
     }
-  ],
+  ], 
+  
   "headers": [
     {
       "source": "/(.*)",
