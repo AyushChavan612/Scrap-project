@@ -18,6 +18,17 @@
   "use": "@vercel/static"
   }
   ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; font-src 'self' data: https://scrap-project-five.vercel.app"
+        }
+      ]
+    }
+  ],
   "routes": [
   {
   "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico))",
@@ -28,7 +39,7 @@
         "dest": "/views/$1"
       },
       {
-        "src": "/(.*\\.(ejs|js|png|jpg|jpeg|gif|ico))",
+        "src": "/(.*\\.(js|ejs|png|jpg|jpeg|gif|ico))",
         "dest": "/model/$1"
       },
   {
