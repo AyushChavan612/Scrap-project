@@ -12,11 +12,11 @@
   ],
   "headers": [
     {
-      "source": "/assets/(.*)",
+      "source": "/assets/**",
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; font-src 'self' data: https://scrap-project-five.vercel.app/"
+          "value": "default-src 'self'; font-src 'self' data: https://scrap-project-five.vercel.app"
         }
       ]
     }
